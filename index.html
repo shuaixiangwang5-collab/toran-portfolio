@@ -6,14 +6,14 @@
     <title>Toran 作品集</title>
     <meta
       name="description"
-      content="托兰（Toran）的作品集。五个栏目目前都是占位，方便以后替换成真实内容。"
+      content="托兰（Toran）的作品集。简介、笔记和作品列表目前都是占位。"
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://shuaixiangwang5-collab.github.io/toran-portfolio/" />
     <meta property="og:title" content="Toran 作品集" />
     <meta
       property="og:description"
-      content="托兰（Toran）的作品集。五个栏目目前都是占位，方便以后替换成真实内容。"
+      content="托兰（Toran）的作品集。简介、笔记和作品列表目前都是占位。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shuaixiangwang5-collab.github.io/toran-portfolio/" />
@@ -29,160 +29,182 @@
   </head>
   <body>
     <div class="site-shell">
-      <article class="content-frame">
-        <header class="masthead">
-          <h1>Toran 作品集</h1>
-          <!-- 替换下面这一句。保持使用 Toran / 托兰，不要写入真实姓名。 -->
-          <p class="lede">
-            占位简介：我是托兰（Toran）。把这句换成你希望读者先读到的话。
-          </p>
-          <nav class="section-nav" aria-label="栏目">
-            <a href="#ai">AI 落地项目和案例</a>
-            <a href="#articles">公众号文章</a>
-            <a href="#notes">读书和思考笔记</a>
-            <a href="#videos">抖音视频</a>
-            <a href="#about">关于我</a>
-          </nav>
-          <p class="hint">五个栏目权重相同。每张卡片都是占位，替换标题、一句说明和日期即可。</p>
+      <div class="page">
+        <header class="hero-copy">
+          <p class="site-name">Toran 作品集</p>
+          <h1><span class="at">@</span>Toran</h1>
+
+          <!--
+            简介：改 #bio-short 和 #bio-long 里的段落。
+            继续使用 Toran / 托兰。搜索「占位」可以找到全部待替换文字。
+          -->
+          <section class="bio" aria-labelledby="bio-label">
+            <div class="bio-bar">
+              <span id="bio-label">简介</span>
+              <div class="bio-options" role="group" aria-label="简介长度">
+                <button type="button" id="bio-short-btn" aria-pressed="true" aria-controls="bio-short bio-long">
+                  默认
+                </button>
+                <button type="button" id="bio-long-btn" aria-pressed="false" aria-controls="bio-short bio-long">
+                  长的
+                </button>
+              </div>
+            </div>
+            <div id="bio-short">
+              <p>占位简介：我是托兰（Toran）。把这段换成你希望读者先读到的话。</p>
+              <p>占位简介：可以再写一句你正在做的事。不要写还没发生的成绩。</p>
+            </div>
+            <div id="bio-long" hidden>
+              <p>占位长简介：这里放更完整的介绍，仍然只写托兰愿意公开的背景。</p>
+            </div>
+          </section>
         </header>
 
-        <main>
+        <figure class="hero-art">
+          <!-- 换成自己的图时，删掉这个 svg，改成 <img src="你的图片.jpg" alt="托兰">。不要放真人假照片。 -->
+          <svg viewBox="0 0 640 820" role="img" aria-label="插画占位：抽象的天空、房子和田野，不是照片">
+            <title>插画占位</title>
+            <rect width="640" height="820" fill="#e7f2f6" />
+            <circle cx="478" cy="132" r="46" fill="#f4e3c2" />
+            <ellipse cx="168" cy="118" rx="92" ry="26" fill="#f8fcfd" />
+            <ellipse cx="310" cy="156" rx="128" ry="30" fill="#f8fcfd" opacity="0.85" />
+            <ellipse cx="470" cy="210" rx="78" ry="20" fill="#f8fcfd" opacity="0.7" />
+            <rect x="86" y="392" width="54" height="168" fill="#8ea4b1" />
+            <rect x="148" y="332" width="78" height="228" fill="#6f8796" />
+            <rect x="236" y="368" width="48" height="192" fill="#9aafba" />
+            <rect x="168" y="392" width="18" height="26" fill="#e7f2f6" opacity="0.55" />
+            <rect x="196" y="392" width="18" height="26" fill="#e7f2f6" opacity="0.55" />
+            <rect x="168" y="436" width="18" height="26" fill="#e7f2f6" opacity="0.4" />
+            <rect x="196" y="436" width="18" height="26" fill="#e7f2f6" opacity="0.4" />
+            <rect x="392" y="444" width="132" height="116" fill="#e2d2b8" />
+            <rect x="408" y="468" width="28" height="34" fill="#f7f1e6" />
+            <rect x="452" y="468" width="28" height="34" fill="#f7f1e6" />
+            <path d="M0 548c140-48 250 18 400-28 92-28 160-8 240 16v284H0Z" fill="#e4eee6" />
+            <path d="M0 628c150-36 280 34 430-8 78-22 140-6 210 18v182H0Z" fill="#d3e2d6" />
+            <path d="M0 708c170-28 320 24 470-6 62-12 118 0 170 14v104H0Z" fill="#c5d6c8" />
+            <circle cx="96" cy="676" r="7" fill="#d7e4c8" />
+            <circle cx="132" cy="694" r="5" fill="#dce8d2" />
+            <circle cx="548" cy="686" r="6" fill="#d7e4c8" />
+          </svg>
+          <figcaption>插画占位</figcaption>
+        </figure>
+
+        <main class="home-main">
           <!--
-            如何改一条：
-            1. 改 h3 里的标题
-            2. 改 card-blurb 里的一句话
-            3. 改 time 里的日期
-            4. 内容换成真实条目后，删掉 <span class="mark">占位</span>
-            复制整块 <article class="card"> 可以再加一条。
+            笔记是两列清单。复制一个 <li> 再加一条。
+            下面四个栏目是「标题 + 日期」行。复制一块 <div class="work-row"> 再加一条。
+            换成真实内容后，删掉文字里的「占位」。
           -->
+
+          <section id="notes" aria-labelledby="notes-heading">
+            <h2 id="notes-heading">读书和思考笔记</h2>
+            <ul class="note-list">
+              <li>占位：书名或笔记标题</li>
+              <li>占位：另一则笔记标题</li>
+              <li>占位：想留下来的一个问题</li>
+              <li>占位：读完后的一句摘记</li>
+            </ul>
+          </section>
 
           <section id="ai" aria-labelledby="ai-heading">
             <h2 id="ai-heading">AI 落地项目和案例</h2>
-            <div class="cards">
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>案例标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话说明这个案例要处理的问题。</p>
-              </article>
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>另一个案例标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话说明你在这个案例里做了哪一件事。</p>
-              </article>
+            <div class="work-list">
+              <div class="work-row">
+                <span>占位：案例标题</span>
+                <time>日期占位</time>
+              </div>
+              <div class="work-row">
+                <span>占位：另一个案例标题</span>
+                <time>日期占位</time>
+              </div>
             </div>
           </section>
 
           <section id="articles" aria-labelledby="articles-heading">
             <h2 id="articles-heading">公众号文章</h2>
-            <div class="cards">
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>文章标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话写出这篇文章的主题。</p>
-              </article>
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>另一篇文章标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话补充读者能从这篇文章里看到什么。</p>
-              </article>
-            </div>
-          </section>
-
-          <section id="notes" aria-labelledby="notes-heading">
-            <h2 id="notes-heading">读书和思考笔记</h2>
-            <div class="cards">
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>书名或笔记标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话记下你想留下来的一点。</p>
-              </article>
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>另一则笔记标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话写下当时的想法。</p>
-              </article>
+            <div class="work-list">
+              <div class="work-row">
+                <span>占位：文章标题</span>
+                <time>日期占位</time>
+              </div>
+              <div class="work-row">
+                <span>占位：另一篇文章标题</span>
+                <time>日期占位</time>
+              </div>
             </div>
           </section>
 
           <section id="videos" aria-labelledby="videos-heading">
             <h2 id="videos-heading">抖音视频</h2>
-            <div class="cards">
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>视频标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话说明这条视频在讲什么。</p>
-              </article>
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>另一条视频标题</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话说明它适合谁看。</p>
-              </article>
+            <div class="work-list">
+              <div class="work-row">
+                <span>占位：视频标题</span>
+                <time>日期占位</time>
+              </div>
+              <div class="work-row">
+                <span>占位：另一条视频标题</span>
+                <time>日期占位</time>
+              </div>
             </div>
           </section>
 
           <section id="about" aria-labelledby="about-heading">
             <h2 id="about-heading">关于我</h2>
-            <div class="cards">
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>关于托兰</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">用一句话介绍托兰愿意公开的背景。</p>
-              </article>
-              <article class="card">
-                <div class="card-head">
-                  <h3><span class="mark">占位</span>联系方式</h3>
-                  <time>日期占位</time>
-                </div>
-                <p class="card-blurb">换成邮箱，或其它你愿意公开的联系方式。</p>
-              </article>
+            <div class="work-list">
+              <div class="work-row">
+                <span>占位：关于托兰</span>
+                <time>日期占位</time>
+              </div>
+              <div class="work-row">
+                <span>占位：联系方式</span>
+                <time>日期占位</time>
+              </div>
             </div>
           </section>
-        </main>
 
-        <footer class="site-footer">
-          <p>托兰 · Toran</p>
-          <button type="button" id="theme-toggle">切换深色</button>
-        </footer>
-      </article>
+          <footer class="site-footer">
+            <p>托兰 · Toran</p>
+            <button type="button" id="theme-toggle">切换深色</button>
+          </footer>
+        </main>
+      </div>
     </div>
     <script>
       (function () {
         var root = document.documentElement;
-        var button = document.getElementById("theme-toggle");
+        var themeButton = document.getElementById("theme-toggle");
+        var shortBtn = document.getElementById("bio-short-btn");
+        var longBtn = document.getElementById("bio-long-btn");
+        var longBio = document.getElementById("bio-long");
 
-        function sync() {
+        function syncTheme() {
           var dark = root.classList.contains("dark");
-          button.textContent = dark ? "切换浅色" : "切换深色";
-          button.setAttribute("aria-pressed", dark ? "true" : "false");
+          themeButton.textContent = dark ? "切换浅色" : "切换深色";
+          themeButton.setAttribute("aria-pressed", dark ? "true" : "false");
           var color = document.querySelector('meta[name="theme-color"]');
           if (color) color.setAttribute("content", dark ? "#1b1a19" : "#ffffff");
         }
 
-        sync();
-        button.addEventListener("click", function () {
+        themeButton.addEventListener("click", function () {
           var dark = root.classList.toggle("dark");
           try {
             localStorage.setItem("theme", dark ? "dark" : "light");
           } catch (e) {}
-          sync();
+          syncTheme();
+        });
+        syncTheme();
+
+        function setBio(long) {
+          longBio.hidden = !long;
+          shortBtn.setAttribute("aria-pressed", long ? "false" : "true");
+          longBtn.setAttribute("aria-pressed", long ? "true" : "false");
+        }
+
+        shortBtn.addEventListener("click", function () {
+          setBio(false);
+        });
+        longBtn.addEventListener("click", function () {
+          setBio(true);
         });
       })();
     </script>
