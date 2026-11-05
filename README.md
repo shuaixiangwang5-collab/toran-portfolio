@@ -4,7 +4,7 @@
 
 页面地址：<https://shuaixiangwang5-collab.github.io/toran-portfolio/>
 
-GitHub Pages 从分支 `cursor/toran-portfolio-shell-a5cb` 的仓库根目录发布。合并进 `main` 之后，到仓库 **Settings → Pages**，把 Branch 改成 `main`，文件夹选 `/ (root)`。这样删掉功能分支后，网站仍从 `main` 更新。
+推送到 `main` 后，[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 会把站点发布到上面的地址。仓库 **Settings → Pages** 的 Source 应为 **GitHub Actions**。合并前，当前功能分支的推送也会发布同一地址，方便先看效果。
 
 ## 怎么改内容
 
@@ -14,7 +14,7 @@ GitHub Pages 从分支 `cursor/toran-portfolio-shell-a5cb` 的仓库根目录发
 2. 页首那句「占位简介」换成你想让读者先看到的话。请继续使用 **Toran / 托兰**，不要写入真实姓名。
 3. 每张卡片改三处：标题、一句说明、日期。换成真实内容后，删掉标题里的 `<span class="mark">占位</span>`。
 4. 要多加一条，复制一整块 `<article class="card">…</article>`，贴到同一栏里。
-5. 提交到当前发布分支后，GitHub Pages 通常一分钟内更新。刷新时如果还是旧页面，再等一会儿。
+5. 提交并推送到 `main`。GitHub Actions 通常一分钟内更新页面。刷新时如果还是旧页面，再等一会儿。
 
 五个栏目都在同一页，权重相同：
 
