@@ -4,7 +4,13 @@
 
 页面地址：<https://shuaixiangwang5-collab.github.io/toran-portfolio/>
 
-推送到 `main` 后，[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 会把站点发布到上面的地址。仓库 **Settings → Pages** 的 Source 应为 **GitHub Actions**。合并前，当前功能分支的推送也会发布同一地址，方便先看效果。
+发布文件在仓库根目录。[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 会在推送到 `main`（以及当前功能分支）时把站点交到 GitHub Pages。GitHub 不允许工作流自己打开 Pages，所以需要仓库管理员做一次：
+
+1. 打开 [Settings → Pages](https://github.com/shuaixiangwang5-collab/toran-portfolio/settings/pages)。
+2. Build and deployment 的 Source 选 **GitHub Actions**。
+3. 回到 Actions，重新运行失败的 “Deploy site”，或再推一次代码。
+
+做完这一次之后，改 `index.html` 并推送到 `main` 就会更新页面。
 
 ## 怎么改内容
 
