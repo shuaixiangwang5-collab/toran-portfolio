@@ -1,0 +1,237 @@
+:root {
+  --font-reading: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC",
+    "Noto Serif SC", "Source Han Serif SC", "STSong", "PMingLiU", Georgia,
+    "Times New Roman", "Droid Sans Fallback", "WenQuanYi Micro Hei", serif;
+  --font-ui: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+  --bg: #fff;
+  --text-copy: #282828;
+  --text-heading: #282828;
+  --text-secondary: #504945;
+  --text-nav: #676767;
+  --text-nav-hover: #504945;
+  --line: color-mix(in srgb, var(--text-copy) 10%, transparent);
+  --focus: #6657c8;
+  --page-pad: clamp(1.25rem, 3.4vw, 3.25rem);
+  color-scheme: light;
+}
+
+html.dark {
+  --bg: #1b1a19;
+  --text-copy: #e8e5df;
+  --text-heading: #f4f1eb;
+  --text-secondary: #cbc6be;
+  --text-nav: #aaa59e;
+  --text-nav-hover: #f4f1eb;
+  --line: color-mix(in srgb, var(--text-copy) 18%, transparent);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-copy);
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--text-copy) 12%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.site-shell {
+  min-height: 100vh;
+  padding: var(--page-pad);
+}
+
+.content-frame {
+  width: min(100%, 600px);
+  margin-inline: auto;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-wrap: pretty;
+}
+
+h1 {
+  margin: 0 0 0.95em;
+  color: var(--text-heading);
+  font-size: clamp(2.2rem, 3.5vw, 2.65rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.lede {
+  margin: 0 0 1.45rem;
+}
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.1rem;
+  margin: 0 0 1.1rem;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.section-nav a {
+  color: var(--text-nav);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--text-nav) 30%, transparent);
+  text-underline-offset: 0.18em;
+  transition: color 0.2s ease;
+}
+
+.section-nav a:hover {
+  color: var(--text-nav-hover);
+}
+
+.hint {
+  margin: 0;
+  color: var(--text-nav);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+main section {
+  scroll-margin-top: 1.25rem;
+}
+
+h2 {
+  margin: 3.1rem 0 1.2rem;
+  color: var(--text-heading);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cards {
+  border-top: 1px solid var(--line);
+}
+
+.card {
+  border-bottom: 1px solid var(--line);
+  padding: 0.9rem 0 1rem;
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+}
+
+h3 {
+  margin: 0;
+  color: var(--text-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.mark {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.02rem 0.42rem 0.08rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text-nav);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  vertical-align: 0.12em;
+}
+
+.card time {
+  flex: none;
+  color: var(--text-nav);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.card-blurb {
+  margin: 0.35rem 0 0;
+  color: var(--text-secondary);
+}
+
+.site-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  color: var(--text-nav);
+  font-family: var(--font-ui);
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+#theme-toggle {
+  margin: 0;
+  padding: 0.45rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-nav);
+  font: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--text-nav) 30%, transparent);
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  color: var(--text-nav-hover);
+}
+
+@media (max-width: 520px) {
+  .card-head {
+    flex-wrap: wrap;
+  }
+
+  .card time {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-nav a {
+    transition: none;
+  }
+}
