@@ -1,44 +1,37 @@
 # Toran 作品集
 
-托兰（Toran）的一页作品集。版式参考 [leerob.com](https://leerob.com)：白底、正文为主、细分割线，五个栏目用同一种卡片，互不突出。
+托兰（Toran）的一页作品集。版式参考 [leerob.com](https://leerob.com) 的首页结构：上面是名字、简介和一张插画，下面先是笔记清单，再是作品列表。白底、留白多、标题用衬线、正文用无衬线。
 
 页面地址：<https://shuaixiangwang5-collab.github.io/toran-portfolio/>
 
-发布文件在仓库根目录。[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 会在推送到 `main`（以及当前功能分支）时把站点交到 GitHub Pages。GitHub 不允许工作流自己打开 Pages，所以需要仓库管理员做一次：
-
-1. 打开 [Settings → Pages](https://github.com/shuaixiangwang5-collab/toran-portfolio/settings/pages)。
-2. Build and deployment 的 Source 选 **GitHub Actions**。
-3. 回到 Actions，重新运行失败的 “Deploy site”，或再推一次代码。
-
-做完这一次之后，改 `index.html` 并推送到 `main` 就会更新页面。
+推送到 `main` 后，[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 会发布更新。
 
 ## 怎么改内容
 
-只改 [`index.html`](index.html)。用浏览器或 GitHub 网页编辑器都可以。
+只改 [`index.html`](index.html)。搜索 `占位`。
 
-1. 搜索 `占位`。
-2. 页首那句「占位简介」换成你想让读者先看到的话。请继续使用 **Toran / 托兰**，不要写入真实姓名。
-3. 每张卡片改三处：标题、一句说明、日期。换成真实内容后，删掉标题里的 `<span class="mark">占位</span>`。
-4. 要多加一条，复制一整块 `<article class="card">…</article>`，贴到同一栏里。
-5. 提交并推送到 `main`。GitHub Actions 通常一分钟内更新页面。刷新时如果还是旧页面，再等一会儿。
+1. **简介**：改「默认」里的两段，和「长的」里的一段。继续使用 **Toran / 托兰**，不要写入真实姓名。
+2. **读书和思考笔记**：每一条是一个 `<li>`。复制 `<li>` 可以再加一条。
+3. **另外四个栏目**（AI 落地项目和案例、公众号文章、抖音视频、关于我）：每一条是一块 `<div class="work-row">`，左边标题，右边日期。复制一整块可以再加一条。
+4. 换成真实内容后，删掉文字里的「占位」。只写已经发生、可以公开的事。
+5. **插画**：现在是占位图。要换成自己的图，删掉 `<figure class="hero-art">` 里面的 `<svg>…</svg>`，改成 `<img src="你的图片.jpg" alt="托兰">`。不要放一张假装是本人的假照片。
+6. 提交并推送到 `main`。大约一分钟后刷新页面。
 
-五个栏目都在同一页，权重相同：
+五个栏目权重相同，只是笔记用清单，其它四个用标题加日期的列表：
 
+- 读书和思考笔记
 - AI 落地项目和案例
 - 公众号文章
-- 读书和思考笔记
 - 抖音视频
 - 关于我
-
-现在的卡片都是占位，没有填写成果或数字。换成真实条目时，只写已经发生、可以公开的事。
 
 ## 文件
 
 | 文件 | 作用 |
 | --- | --- |
-| `index.html` | 全部文字。平时只改这个。 |
+| `index.html` | 全部文字和占位插画。平时只改这个。 |
 | `styles.css` | 版式。不改内容就不用动。 |
 | `favicon.svg` | 浏览器标签上的小图标。 |
 | `.nojekyll` | 让 GitHub Pages 按原样发布静态文件。 |
 
-深色只是页脚的「切换深色」。默认是浅色。选择会记在这台浏览器里。
+深色只是页脚的「切换深色」。默认是浅色。选择会记在这台浏览器里。简介的「默认 / 长的」只切换这一页上的段落，不会被记住。
